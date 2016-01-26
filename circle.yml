@@ -1,7 +1,12 @@
 machine:
   services:
     - docker
+
 dependencies:
   override:
     - docker info
     - docker version
+
+test:
+  override:
+    - echo hello
