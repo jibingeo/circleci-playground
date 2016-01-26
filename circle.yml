@@ -10,3 +10,13 @@ dependencies:
 test:
   override:
     - echo hello
+
+deployment:
+  production:
+    branch: production
+    commands:
+      - echo "Hello production"
+  staging:
+    branch: master
+    commands:
+      - echo "Hello master"
