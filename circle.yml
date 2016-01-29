@@ -10,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - docker run quay.io/hippycam/node_test npm test
+    - docker run  -v $CIRCLE_TEST_REPORTS/mocha:/test/mocha quay.io/hippycam/node_test npm test
 
 deployment:
   production:
