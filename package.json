@@ -1,0 +1,23 @@
+{
+  "name": "circleci-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/test",
+    "start": "node ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jibingeo/circleci-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jibingeo/circleci-playground/issues"
+  },
+  "homepage": "https://github.com/jibingeo/circleci-playground#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}

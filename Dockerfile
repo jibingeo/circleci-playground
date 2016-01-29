@@ -1,6 +1,10 @@
 FROM node:4.2.2
 
 WORKDIR /code
-ADD ./src /code
 
-CMD node ./index.js
+ADD package.json /code/package.json
+RUN npm install
+
+ADD ./src /code/src
+
+CMD npm start
