@@ -4,19 +4,15 @@ machine:
 
 dependencies:
   override:
-    - docker info
-    - docker version
+    - docker build -t quay.io/hippycam/node_test .
 
 test:
   override:
-    - echo hello
+    - docker run --rm quay.io/hippycam/node_test
 
 deployment:
   production:
-    branch: production
-    commands:
-      - echo "Hello production"
-  staging:
     branch: master
     commands:
-      - echo "Hello master"
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS quay.io/hippycam/node_test
+      - docker push quay.io/hippycam/node_test
