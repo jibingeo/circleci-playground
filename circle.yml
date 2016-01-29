@@ -1,4 +1,6 @@
 machine:
+  environment:
+    MOCHA_FILE: $CIRCLE_TEST_REPORTS/mocha
   services:
     - docker
 
@@ -8,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - docker run --rm quay.io/hippycam/node_test npm test
+    - docker run quay.io/hippycam/node_test npm test
 
 deployment:
   production:
